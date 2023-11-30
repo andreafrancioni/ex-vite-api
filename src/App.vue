@@ -2,6 +2,20 @@
 /* JS App */
 import axios from 'axios'; //importo Axios
 import { store } from "./store.js" //state management
+
+export default {
+  data() {
+    return {
+      store,
+    }
+  },
+  mounted() {
+
+  },
+  methods: {
+
+  }
+}
 </script>
 
 <template>
