@@ -9,6 +9,7 @@ export default {
 <template>
     <div class="wrapper">
         <div class="card">
+            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/3152059/beer-clipart-md.png" alt="">
             <h3>{{ shop.name }}</h3>
             <p>{{ shop.city }}</p>
             <p>{{ shop.street }}</p>
@@ -31,5 +32,9 @@ export default {
     background: gold;
     border: 2px solid white;
     color: black
+}
+
+img {
+    width: 3rem;
 }
 </style>
