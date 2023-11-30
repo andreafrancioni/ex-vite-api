@@ -10,9 +10,14 @@ export default {
     }
   },
   mounted() {
-
+    this.getBrewShop();
   },
   methods: {
+    getBrewShop() {
+      axios.get(this.store.brewApi).then(result => {
+        console.log(result.data)
+      });
+    },
 
   }
 }
