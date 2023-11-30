@@ -6,16 +6,21 @@ import { store } from "./store.js" //state management
 export default {
   data() {
     return {
+      /* Richiama store per utilizzare il file store.js come state management */
       store,
     }
   },
   mounted() {
+    /* All'avvio dell'app lancia tali funzioni */
     this.getBrewShop();
   },
   methods: {
+
+    /* Funzione che interroga l'API e mostra il risultato data all'interno della console  */
     getBrewShop() {
       axios.get(this.store.brewApi).then(result => {
         console.log(result.data)
+        this.store.brewShops = result.data
       });
     },
 
