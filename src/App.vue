@@ -8,11 +8,14 @@ import { store } from "./store.js" //state management
 import AppCard from './components/AppCard.vue';
 
 export default {
+  components: {
+    AppCard,
+  },
+
   data() {
     return {
       /* Richiama store per utilizzare il file store.js come state management */
       store,
-      AppCard,
     }
   },
   mounted() {
@@ -35,8 +38,25 @@ export default {
 
 <!-- HTML App -->
 <template>
-  <h1>Vite + Vue Template</h1>
+  <div class="container">
+    <div class="brewShops">
+      <!-- Per ogni shop nell'array mi genera un AppCard passandogli i dati con i props dall'array -->
+      <AppCard v-for="brewSingleShop in this.store.brewShops" :shop="brewSingleShop" />
+    </div>
+  </div>
 </template>
 
 <!-- CSS App -->
-<style scoped></style>
+<style scoped>
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.brewShops {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+</style>
