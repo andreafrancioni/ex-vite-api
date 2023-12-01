@@ -14,6 +14,7 @@ export default {
             <p>{{ shop.city }}</p>
             <p>{{ shop.street }}</p>
             <p>{{ shop.phone }}</p>
+            <p>{{ shop.brewery_type }}</p>
             <p>{{ shop.website_url }}</p>
 
 
